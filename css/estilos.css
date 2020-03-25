@@ -9,6 +9,13 @@ canvas {
     background-color: transparent;
 }
 
+  .aligned-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
 /* barra de progreso */
 
 .progress {
@@ -675,3 +682,9 @@ nav a:hover, nav a:focus {
     border-radius: 50%;
     margin: 5%;
 }
+.card-body{
+    background-color: #0c0800;
+}
+
+
+  

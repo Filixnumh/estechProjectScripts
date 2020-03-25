@@ -6,8 +6,9 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 413px;
+    width: 500px;
     height: 100px;
+    max-height: 300px;
     margin: -4px auto;
 }
 
@@ -57,7 +58,7 @@
 }
 
 #player-track.active {
-    top: -92px;
+    top: -100px;
 }
 
 #album-name {
@@ -73,7 +74,7 @@
 }
 
 #track-time {
-    height: 12px;
+    height: 15px;
     margin-bottom: 3px;
     overflow: hidden;
 }
@@ -101,7 +102,7 @@
 
 #s-area, #seek-bar {
     position: relative;
-    height: 4px;
+    height: 10px;
     border-radius: 4px;
 }
 
@@ -261,12 +262,14 @@
     margin: 0 5px 0 141px;
     float: right;
     overflow: hidden;
+    
 }
 
 .control {
     width: 33.333%;
     float: left;
     padding: 12px 0;
+    
 }
 
 .button {
