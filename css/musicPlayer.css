@@ -8,7 +8,7 @@
     bottom: 0;
     width: 500px;
     height: 100px;
-    max-height: 300px;
+    max-height: 400px;
     margin: -4px auto;
 }
 
@@ -17,8 +17,9 @@
         position: fixed;
         left: 0;
         bottom: 0;
-        width: 90vw;
+        width: 100vw;
         height: 100px;
+        max-height: 400px;
         margin: -4px auto;
     }
 }
@@ -28,7 +29,8 @@
         position: fixed;
         left: 0;
         bottom: 0;
-        width: 90vw;
+        width: 100vw;
+        max-height: 400px;
         height: 100px;
         margin: -4px auto;
     }
