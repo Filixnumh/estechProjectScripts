@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projecto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+</head>
+
+
+
+<body>
+    <!-- barra superior -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="404.html"><img src="img/logo.png" style="max-width:50px; margin-top: -8px;"
+                alt="logo"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContentLG"
+            aria-controls="navbarSupportedContentLG" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
+            <ul class="navbar-nav mr-auto navbarbaranimacion">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <h5>Home</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">
+                        <h5>Contacto</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="QuienesSomos.html">
+                        <h5>Quienes Somos</h5>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLG" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Log In
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right bg-dark text-white"
+                        aria-labelledby="navbarDropdownLG">
+                        <form class="px-4 py-3">
+                            <div class="form-group">
+                                <label for="mail">Email </label>
+                                <input type="email" class="form-control" id="mail" placeholder="tuEmail@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">Contraseña</label>
+                                <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                    recuerdame
+                                </label>
+                            </div>
+                            <button type="submit" class=" btn draw-border">Login</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bg-dark text-white" href="#" data-toggle="modal"
+                            data-target="#registrate">No tienes cuenta? Registrate ya!</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--fin barra-->
+    <!-- Maquetacion -->
+    <div class="container-fluid ">
+        <div class="row">
+
+            <div class="col-sm-12  text-left">
+                <!-- COMIENZO MAQUETACION PERFIL -->
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-sm-3  " style="max-height: 20%">
+                            <div class="bg-dark card">
+                                <div class="card bg-dark">
+
+                                    <div class="d-flex justify-content-center"><img src="img/caratula.png"
+                                            class="img-circle hoveranimated" height="65" width="65" alt="Avatar"></div>
+                                </div>
+                                <div class="card bg-dark">
+                                    <p>Biografia</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis animi explicabo
+                                        repellendus recusandae maxime necessitatibus dignissimos tempora ut consequatur,
+                                        quod quidem officiis ad nostrum iste natus incidunt maiores assumenda
+                                        reprehenderit.</p>
+                                </div>
+                                <p><a href="#">Instagram <i class="fa fa-instagram"></i></a></p>
+                                <p><a href="#">Facebook <i class="fa fa-facebook"></i></a></p>
+                                <p><a href="#">Skype <i class="fa fa-skype"></i></a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6  ">
+                            <div class="card bg-dark"
+                                style="background-image: url('img/bg.jpg');background-size: cover;">
+
+                                <div class=" d-flex justify-content-center" style="height: 100px;"><img
+                                        src="img/caratula.png" class="img-circle hoveranimated" height="55" width="55"
+                                        alt="Avatar"></div>
+
+                                <h5 style=" background-color: rgba(0, 0, 0, 0.603); ">Nombre de artista</h5>
+                                <hr>
+
+                            </div>
+                            <hr>
+                            <div class=" overflow-auto scroll_bar"
+                                style="max-height: 50%;overflow-x: hidden !important; ">
+                                <div class="row ">
+                                    <div class="col-md-12 col ">
+                                        <div class="card mb-3 text-white bg-dark " style="max-width: 540px; ">
+                                            <div class="row no-gutters ">
+                                                <div class="col-md-4 ">
+                                                    <img src="img/caratula.png " style="max-width: 100px; "
+                                                        class="card-img " alt="... ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <div class="card-body ">
+                                                        <h5 class="card-title ">Titulo de la cancion</h5>
+                                                        <p class="card-text ">Esto es una descripcion de la cantion</p>
+                                                        <p class="card-text "><small class="text-muted ">Artista:
+                                                                "nombre del artista "</small></p>
+                                                        <audio controls preload="metadata" style="width: 100%;">
+                                                            <source src="files/testSound2.mp3" type="audio/ogg">
+                                                        </audio>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-12 col ">
+                                        <div class="card mb-3 text-white bg-dark " style="max-width: 540px; ">
+                                            <div class="row no-gutters ">
+                                                <div class="col-md-4 ">
+                                                    <img src="img/caratula.png " style="max-width: 100px; "
+                                                        class="card-img " alt="... ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <div class="card-body ">
+                                                        <h5 class="card-title ">Titulo de la cancion</h5>
+                                                        <p class="card-text ">Esto es una descripcion de la cantion</p>
+                                                        <p class="card-text "><small class="text-muted ">Artista:
+                                                                "nombre del artista "</small></p>
+                                                        <audio controls preload="metadata" style="width: 100%;">
+                                                            <source src="files/testSound2.mp3" type="audio/ogg">
+                                                        </audio>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-12 col ">
+                                        <div class="card mb-3 text-white bg-dark " style="max-width: 540px; ">
+                                            <div class="row no-gutters ">
+                                                <div class="col-md-4 ">
+                                                    <img src="img/caratula.png " style="max-width: 100px; "
+                                                        class="card-img " alt="... ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <div class="card-body ">
+                                                        <h5 class="card-title ">Titulo de la cancion</h5>
+                                                        <p class="card-text ">Esto es una descripcion de la cantion</p>
+                                                        <p class="card-text "><small class="text-muted ">Artista:
+                                                                "nombre del artista "</small></p>
+                                                        <audio controls preload="metadata" style="width: 100%;">
+                                                            <source src="files/testSound2.mp3" type="audio/ogg">
+                                                        </audio>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-12 col ">
+                                        <div class="card mb-3 text-white bg-dark " style="max-width: 540px; ">
+                                            <div class="row no-gutters ">
+                                                <div class="col-md-4 ">
+                                                    <img src="img/caratula.png " style="max-width: 100px; "
+                                                        class="card-img " alt="... ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <div class="card-body ">
+                                                        <h5 class="card-title ">Titulo de la cancion</h5>
+                                                        <p class="card-text ">Esto es una descripcion de la cantion</p>
+                                                        <p class="card-text "><small class="text-muted ">Artista:
+                                                                "nombre del artista "</small></p>
+                                                        <audio controls preload="metadata" style="width: 100%;">
+                                                            <source src="files/testSound2.mp3" type="audio/ogg">
+                                                        </audio>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="titleBox">
+                                    <label>Comentarios</label>
+
+                                </div>
+                                <div class="commentBox">
+
+
+                                </div>
+                                <div class="actionBox">
+                                    <ul class="commentList scroll_bar">
+                                        <li>
+                                            <div class="commenterImage">
+                                                <img src="img/caratula.png" alt="avatar" />
+                                            </div>
+                                            <div class="commentText">
+                                                <p class="">Esto es un comentario de prueba de esta pagina</p> <span
+                                                    class="text-muted">11 dic, 2019</span>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="commenterImage">
+                                                <img src="img/caratula.png" alt="avatar" />
+                                            </div>
+                                            <div class="commentText">
+                                                <p class="">Esto es un comentario de prueba de esta pagina</p> <span
+                                                    class="text-muted">11 dic, 2019</span>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="commenterImage">
+                                                <img src="img/caratula.png" alt="avatar" />
+                                            </div>
+                                            <div class="commentText">
+                                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    ratione nobis enim totam molestiae voluptates ullam?</p> <span
+                                                    class="text-muted">11 dic, 2019</span>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="commenterImage">
+                                                <img src="img/caratula.png" alt="avatar" />
+                                            </div>
+                                            <div class="commentText">
+                                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    ratione nobis enim totam molestiae voluptates ullam?</p> <span
+                                                    class="text-muted">11 dic, 2019</span>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Tu comentario" />
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn draw-border">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--logo-->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer -->
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-12 col-md-6 ">
+                    <h6>estech Music</h6>
+                    <img src="img/logo.png " style="max-width:100px; " alt="logo">
+                </div>
+                <div class="col-xs-6 col-md-3 ">
+                    <h6>Enlaces</h6>
+                    <ul class="footer-links ">
+                        <li><a href="index.html ">inicio</a></li>
+                        <li><a href="contacto.html ">Contacto</a></li>
+                        <li><a href=" ">Quienes Somos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-8 col-sm-6 col-xs-12 ">
+                    <p>Copyright &copy; 2019 All Rights Reserved by Estech
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 ">
+                    <ul class="social-icons ">
+                        <li><a class="facebook " href="404.html "><i class="fa fa-facebook "></i></a></li>
+                        <li><a class="twitter " href="404.html "><i class="fa fa-twitter "></i></a></li>
+                        <li><a class="linkedin " href="404.html "><i class="fa fa-linkedin "></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--fin footer-->
+    <!-- Modal de registro -->
+    <div class="modal fade " id="registrate">
+        <div class="modal-dialog ">
+
+            <!-- Modal content-->
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <h4 class="modal-title ">Formulario de registro</h4>
+                    <img src="img/logo.png " class="pull-right " height="100" width="100" alt="logo">
+
+                </div>
+                <div class="modal-body ">
+                    <!-- FORMULARIO DE REGISTRO!  -->
+                    <form>
+
+                        <div class="form-group">
+                            <label>Nombre :</label>
+                            <input type="text" class="form-control " name="Name ">
+                        </div>
+                        <div class="form-group ">
+                            <label>Apellidos</label>
+                            <input type="text" class="form-control " name="Surname ">
+                        </div>
+
+                        <div class="form-group ">
+                            <label>Nombre de usuario :</label>
+                            <input type="text" class="form-control " name="Username ">
+                        </div>
+                        <div class="form-group ">
+                            <label>Email:</label>
+                            <input type="email" class="form-control " name="Email ">
+                        </div>
+                        <div class="form-group ">
+                            <label>Contraseña :</label>
+                            <input type="password" class="form-control " name="Password ">
+                        </div>
+                        <button class="btn draw-border " type="submit">Enviar</button>
+                        <button class="btn draw-border pull-right " data-dismiss="modal ">Cerrar</button>
+                    </form>
+                    <!-- FIN FORMULARIO DE REGISTRO!  -->
+                </div>
+                <div class="modal-footer ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin modal  -->
+</body>
+
+
+</html>
