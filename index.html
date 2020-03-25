@@ -29,6 +29,7 @@
 
 
 <body>
+
     <!-- barra superior -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="404.html"><img src="img/logo.png" style="max-width:50px; margin-top: -8px;"
@@ -147,14 +148,7 @@
                 <!-- carusel fin -->
                 <!--inicio contenido-->
                 <hr>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Buscar">
-                    <div class="input-group-append ">
-                        <button class="btn btn-dark draw-border" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
+
                 <div style="background-color: #1b1b1b85 !important;">
                     <hr>
                     <h2 class=" text-center ">Bienvenido</h2>
@@ -162,9 +156,21 @@
                     <h4 class="text-center">"Escucha millones de canciones sin anuncios, a la carta en la nube"</h4>
                     <hr>
                 </div>
+
                 <hr>
+
                 <h3 class="hoveranimated">Canciones Destacadas:</h3>
                 <p>Disfruta de la mejor musica</p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar" id="searchBar">
+                    <div class="input-group-append ">
+                        <button class="btn btn-dark draw-border" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+
 
                 <!--fin contenido-->
                 <!--inicio maquetacion canciones-->
@@ -290,7 +296,7 @@
                 </div>
                 <div id="player-content">
                     <div id="album-art">
-                        
+
                         <div id="buffer-box">Buffering ...</div>
                     </div>
                     <div id="player-controls">
@@ -320,20 +326,46 @@
 </body>
 <script type="text/javascript" src="js/main.js"></script>
 <script>
+    // barra de busqueda
+    $(document).ready(function () {
+        //se guarda el primer valor
+        var value2 = "";
+        $("#searchBar").on("keyup", function () {
+            var value = $(this).val();
+            //si el valor es nulo se muestran los valores 
+            if (value === "") {
+                $(".card-title").filter(function () { return $(this).children().length === 0; }).parent().parent().parent().parent().parent().slideDown();
+            }
+            // si el valor introducido es menor al valor introdcucido anteriormente se vuelven a mostrar los valores 
+            if (value.length < value2.length) {
+                setTimeout(
+                    function () {
+                        $(".card-title").filter(function () { return $(this).children().length === 0; }).parent().parent().parent().parent().parent().slideDown();
+                    }, 2000);
+                value2 = value;
+            }
+            //se esconden los valores que no sean iguales a la busqueda
+            findElement(value).slideUp();
+            // el valor previo se iguala al nuevo
+            value2 = value;
+        });
+    });
 
+    //mediante esta funcion recogemos los elementos que no queremos , es decir aquellos que queremos esconder
+    function findElement(text) {
+        // realizamos Override a la funcion contains de jquery para que no haya problema entre mayuscula y minuscula
+        $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+            return function (elem) {
+                return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+            };
+        });
+        // se buscan aquellos valores que no contengan la string y se usan los parent() para selecionar el padre raiz
+        var search = $(".card-title").not(":contains(" + text.toLowerCase() + ")")
+            .filter(function () { return $(this).children().length === 0; })
+            .parent().parent().parent().parent().parent();
 
-
-
-    window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
-
-
-
-
-
-
-
-
-
+        return search;
+    }
 
 
 

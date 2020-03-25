@@ -1,6 +1,7 @@
+window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 $(function () {
     var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"), i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, albums = ['Hiyo', 'Vladimir Cauchemar', 'Vance Joy', 'Elderbrook', 'Anatu','Dan Croll'], trackNames = ['Hiyo - Dont Go', 'Aulos', 'Riptide', 'Sleepwalking', 'Bleach-(Til Kolare Remix)','From Nowhere (Baardsen Remix)'], albumArtworks = ['c_1', 'c_2', 'c_3', 'c_4', 'c_5','c_6'], trackUrl = ['(../../files/song1.mp3', '(../../files/song2.mp3', '(../../files/song3.mp3', '(../../files/song4.mp3', '(../../files/song5.mp3','(../../files/song6.mp3'], playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
-
+// bucle que inyecta todos las canciones en el documento
     for (var indexloop = 0; indexloop < albums.length; indexloop++) {
         var html =
             "<div class='col-md-6 col'>" +
@@ -34,6 +35,7 @@ $(function () {
         }
 
     }
+    //funcion play pause del audio
     function playPause() {
         setTimeout(function () {
             if (audio.paused) {
@@ -56,7 +58,7 @@ $(function () {
         }, 300);
     }
 
-
+// muestra el tiempo sobre la barra del reproductor
     function showHover(event) {
         seekBarPos = sArea.offset();
         seekT = event.clientX - seekBarPos.left;
@@ -88,18 +90,18 @@ $(function () {
         insTime.css({ 'left': seekT, 'margin-left': '-21px' }).fadeIn(0);
 
     }
-
+//esconde los datos al dejar de hacer hover en la barra de tiempo
     function hideHover() {
         sHover.width(0);
         insTime.text('00:00').css({ 'left': '0px', 'margin-left': '0px' }).fadeOut(0);
     }
-
+//reproduce el audio desde el tiempo que se clicke en el hover
     function playFromClickedPos() {
         audio.currentTime = seekLoc;
         seekBar.width(seekT);
         hideHover();
     }
-
+// acutaliza el tiempo de la cancion
     function updateCurrTime() {
         nTime = new Date();
         nTime = nTime.getTime();
@@ -153,7 +155,7 @@ $(function () {
             clearInterval(buffInterval);
         }
     }
-
+// comprueba que el recurso no este en bufering
     function checkBuffering() {
         clearInterval(buffInterval);
         buffInterval = setInterval(function () {
@@ -167,7 +169,7 @@ $(function () {
 
         }, 100);
     }
-
+// anvanza una cacion en el array
     function selectTrack(flag) {
         if (flag == 0 || flag == 1)
             ++currIndex;
@@ -222,6 +224,7 @@ $(function () {
                 ++currIndex;
         }
     }
+    //selecciona una cancion en el array directamente
     function selectTrackatPos(flag, currIndex) {
 
 
@@ -279,7 +282,7 @@ $(function () {
 
 
     }
-
+// inicia el reproductor haciendo uso de todas las funciones listadas anteriormente
     function initPlayer() {
         audio = new Audio();
         audio.crossOrigin = "anonymous";
@@ -310,8 +313,6 @@ $(function () {
 
         });
 
-
-
     }
     $('.startSong').click(function () {
 
@@ -319,7 +320,7 @@ $(function () {
         $("#show_hide_music").show(1000);
 
     });
-
+// recoge los datos del contexto del audio que se este reproduciendo para generar un visualizador
     function start(currentAudio) {
 
         var audio = currentAudio;
