@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projecto</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Projecto</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/musicPlayer.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    
+    </head>
 
 
 
@@ -226,31 +229,92 @@
                 </div>
                 <div class="modal-body">
                     <!-- FORMULARIO DE REGISTRO!  -->
-                    <form>
 
-                        <div class="form-group">
-                            <label>Nombre :</label>
-                            <input type="text" class="form-control" name="Name">
-                        </div>
-                        <div class="form-group">
-                            <label>Apellidos</label>
-                            <input type="text" class="form-control" name="Surname">
-                        </div>
+                    <form action="#" id="form-form">
 
-                        <div class="form-group">
-                            <label>Nombre de usuario :</label>
-                            <input type="text" class="form-control" name="Username">
+                        <div class="tab-content">
+                            <div class="tab-pane" id="step1">
+                                <ul>
+                                    <li>
+                                        <h3>Bienvenido:</h3>
+                                        <label > A continuacion llevaras a cabo tu registro en la plataforma tras unos pocos pasos.</label>
+                                        <div class="errorTxt"></div>
+                                       
+                                    </li>
+                                    <li style="list-style: none; display: inline">
+                                        <button class="next-btn next-btn1" type="button">Continuar</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="step2">
+                                <ul>
+                                    <li>
+                                        <label>Nombre de usuario:</label>
+                                        <div class="errorTxt"></div>
+                                        <input id="usr" type="text" name="f_username">
+                                    </li>
+                                    <li>
+                                        <label>¿Genero musical preferido?</label>
+                                        <div class="errorTxt"></div>
+                                        <select name="f_genre">
+                                            <option value=""></option>
+                                            <option value="blues">blues</option>
+                                            <option value="Jazz">Jazz</option>
+                                            <option value="Gospel">Gospel</option>
+                                            <option value="Rock">Rock</option>
+                                            <option value="House">House</option>
+                                            <option value="Pop">Pop</option>
+                                            <option value="Hip Hop">Hip Hop</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>Genero:</label>
+                                        <div class="errorTxt"></div>
+                                        <select name="f_sex">
+                                            <option value=""></option>
+                                            <option value="hombre">hombre</option>
+                                            <option value="mujer">mujer</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <button class="next-btn next-btn2" type="button">Continuar</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="step3">
+                                <ul>
+                                    <li>
+                                        <label>Nombre completo:</label>
+                                        <div class="errorTxt"></div>
+                                        <input type="text" name="f_fullname">
+                                    </li>
+                                    <li>
+                                        <label>Correo electronico:</label>
+                                        <div class="errorTxt"></div>
+                                        <input type="email" name="f_email">
+                                    </li>
+                                  
+                                    <li>
+                                        <button class="submit-btn" type="submit">Registrarme</button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Email:</label>
-                            <input type="email" class="form-control" name="Email">
+                        <div class="progress-wrap">
+                            <div class="line-progress-bar">
+                                <div class="line"></div>
+                                <ul class="checkout-bar">
+                                    <li class="progressbar-dots active"><span>Paso 1</span></li>
+                                    <li class="progressbar-dots"><span>Paso 2</span></li>
+                                    <li class="progressbar-dots"><span>Paso 3</span></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Contraseña :</label>
-                            <input type="password" class="form-control" name="Password">
+                        
+
+                        <div id="loader" style="display: none;">
+                          <center>  <div class="lds-ripple"><div></div><div></div></div></center>
                         </div>
-                        <button class="btn draw-border" type="submit">Enviar</button>
-                        <button type="button" class="btn draw-border   pull-right" data-dismiss="modal">Cerrar</button>
                     </form>
                     <!-- FIN FORMULARIO DE REGISTRO!  -->
                 </div>
@@ -261,6 +325,6 @@
     </div>
     <!-- Fin modal  -->
 </body>
-
+<script type="text/javascript" src="js/form.js"></script>
 
 </html>
